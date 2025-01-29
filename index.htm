@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Droid Arabic Kufi', sans-serif;
+            text-align: center;
+
+        }
+
+
+        input {
+            font-family: 'Droid Arabic Kufi', sans-serif;
+        }
+
+        textarea {
+            width: 251px;
+            height: 85px;
+            font-family: 'Droid Arabic Kufi', sans-serif;
+        }
+
+        .cv1 {
+            background: rgb(231 235 235);
+        }
+
+        .cv2 {
+            background: rgb(231 235 235);
+        }
+
+        .cv3 {
+            background: rgb(231 235 235);
+        }
+
+        .cv4 {
+            background: rgb(231 235 235);
+        }
+
+        .cv5 {
+            background: rgb(231 235 235);
+        }
+
+        .cv6 {
+            background: rgb(231 235 235);
+        }
+
+        .cv7 {
+            background: rgb(231 235 235);
+        }
+
+
+
+
+        input,
+        textarea {
+            width: 80%;
+            /* اجعل الحقول أعرض */
+            padding: 10px;
+            /* أضف بعض التباعد داخل الحقل */
+            margin: 8px 0;
+            /* أضف تباعد بين الحقول */
+            border: 1px solid #ccc;
+            /* لون الحدود */
+            border-radius: 10px;
+            /* زاوية ناعمة ومدورة */
+            font-size: 16px;
+            /* حجم الخط داخل الحقل */
+            outline: none;
+            /* إزالة التحديد الأزرق عند النقر */
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #007bff;
+            /* تغيير لون الإطار عند التفاعل */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        input,
+        textarea {
+            width: 60%;
+            /* حجم مناسب بعرض 60% */
+            max-width: 400px;
+            /* أقصى عرض للحقول */
+            min-width: 250px;
+            /* أقل عرض للحقول */
+            padding: 12px;
+            /* تباعد داخلي لجعلها مريحة */
+            margin: 10px 0;
+            /* تباعد بين الحقول */
+            border: 1px solid #ccc;
+            /* لون الحدود */
+            border-radius: 8px;
+            /* جعل الحواف ناعمة */
+            font-size: 16px;
+            /* تحسين حجم الخط */
+            background-color: #f9f9f9;
+            /* لون خلفية خفيف */
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #007bff;
+            /* تغيير لون الإطار عند التركيز */
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            background-color: #ffffff;
+            /* اجعل الخلفية بيضاء عند التركيز */
+        }
+
+        body {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            /* تدرج لوني جميل */
+            font-family: 'Droid Arabic Kufi', sans-serif;
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            /* خلفية خفيفة لحقول الإدخال */
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        }
+
+        /* تنسيق زر الإرسال */
+        input[type="submit"] {
+            background-color: #007bff;
+            /* لون أزرق */
+            color: white;
+            /* لون النص أبيض */
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            /* لون أزرق داكن عند التمرير */
+        }
+
+        /* تنسيق زر اختيار الملف */
+        input[type="file"] {
+            background-color: #f8f9fa;
+            /* خلفية خفيفة */
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            width: 80%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: #007bff;
+        }
+
+        /* إخفاء زر اختيار الملف الافتراضي */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* تنسيق زر مخصص لاختيار الملف */
+        .custom-file-upload {
+            background-color: #f8f9fa;
+            /* لون الخلفية */
+            color: #333;
+            /* لون النص */
+            border: 1px solid #ccc;
+            /* إطار خفيف */
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #e9ecef;
+            /* لون مختلف عند تمرير الماوس */
+            border-color: #007bff;
+        }
+
+        /* تنسيق النص بجانب زر اختيار الملف */
+        .file-label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        input[type="date"] {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* تأثير عند تمرير الماوس */
+        input[type="date"]:hover {
+            border-color: #007bff;
+        }
+
+        /* تأثير عند الضغط */
+        input[type="date"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+
+        /* تنسيق حقل التاريخ */
+        input[type="date"] {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            /* نفس خلفية الحقول الأخرى */
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #aaa;
+            /* لون النص الافتراضي */
+        }
+
+        /* تأثير عند تمرير الماوس */
+        input[type="date"]:hover {
+            border-color: #007bff;
+        }
+
+        /* تأثير عند الضغط */
+        input[type="date"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            outline: none;
+            color: #333;
+            /* تغيير اللون عند إدخال البيانات */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Arabic+Kufi&display=swap">
+
+</head>
+
+<body>
+    <form action="indexbb.html" method="get">
+        <h1> تسجيل الدخول</h1> <br>
+
+        <input type="text" placeholder="اكتب اسمك" class="cv1"> <br> <br>
+        <input type="text" placeholder="اكتب رقم هويتك" minlength="9" maxlength="9" class="cv2"> <br> <br>
+        <label for="">اختر تاريخ ميلادك</label><br>
+        <input type="date"> <br><br>
+        <input type="email" placeholder="اكتب جيميلك" class="cv3"> <br><br>
+        <input type="password" placeholder="ضع كلمة مرور الجيميل " minlength="6" maxlength="10" class="cv4"> <br><br>
+        <input type="password" placeholder="قم ب تأكيد كلمة المرور " minlength="6" maxlength="10" class="cv5"> <br><br>
+
+        <input list="cv" name="cd" placeholder="اضغط هنا وحدد بلدك" class="cv6"><br><br>
+        <textarea name="" id="" placeholder="اكتب نبذة عن نفسك" class="cv7"></textarea>
+        <div>
+            <label for="fileUpload" class="custom-file-upload">حمل صورة لك</label>
+            <input id="fileUpload" type="file">
+            <p class="file-label">اختر من الملفات</p>
+
+        </div>
+        <datalist id="cv">
+            <option value="مصر"></option>
+            <option value="فلسطين"></option>
+            <option value="الاردن"></option>
+            <option value="لبنان"></option>
+            <option value="السعودية"></option>
+            <option value="اليمن"></option>
+            <option value="قطر"></option>
+            <option value="الامارات"></option>
+
+
+        </datalist>
+        <input type="submit">
+
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>
